@@ -23,12 +23,14 @@ export const Dashboard: FC = () => {
     fetchInbounds();
   }, []);
   return (
-    <VStack justifyContent="space-between" minH="100vh" p="6" rowGap={4}>
-      <Box w="full">
-        <Header />
-        <Statistics mt="4" />
-        <Filters />
-        <UsersTable />
+    <VStack justifyContent="space-between" minH="100vh" rowGap={6} spacing={0}>
+      <Box w="full" maxW="1400px" mx="auto">
+        <Header py={4} />
+        <Statistics mt="6" mb="8" layerStyle="card" transition="all 0.3s ease" _hover={{ boxShadow: 'card-hover', _dark: { boxShadow: 'card-hover-dark' } }} />
+        <Filters mb="6" />
+        <Box layerStyle="card" transition="all 0.3s ease" _hover={{ boxShadow: 'card-hover', _dark: { boxShadow: 'card-hover-dark' } }}>
+          <UsersTable />
+        </Box>
         <UserDialog />
         <DeleteUserModal />
         <QRCodeDialog />
@@ -40,7 +42,7 @@ export const Dashboard: FC = () => {
         <ResetAllUsageModal />
         <CoreSettingsModal />
       </Box>
-      <Footer />
+      <Footer py={6} w="full" />
     </VStack>
   );
 };
