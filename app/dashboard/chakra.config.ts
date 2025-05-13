@@ -1,25 +1,33 @@
 import { extendTheme } from "@chakra-ui/react";
 export const theme = extendTheme({
-  shadows: { outline: "0 0 0 2px var(--chakra-colors-primary-200)" },
   fonts: {
     body: `Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif`,
+    heading: `Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif`,
+  },
+  shadows: {
+    outline: "0 0 0 2px var(--chakra-colors-primary-200)",
+    card: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "card-dark": "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
+    "card-hover": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "card-hover-dark": "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)",
   },
   colors: {
-    "light-border": "#d2d2d4",
+    "light-border": "#e3e3e5",
     primary: {
-      50: "#9cb7f2",
-      100: "#88a9ef",
-      200: "#749aec",
-      300: "#618ce9",
-      400: "#4d7de7",
-      500: "#396fe4",
-      600: "#3364cd",
-      700: "#2e59b6",
-      800: "#284ea0",
-      900: "#224389",
+      50: "#e6f0ff",
+      100: "#bad9ff",
+      200: "#8dbfff",
+      300: "#5ca4ff",
+      400: "#2e89ff",
+      500: "#046aff",
+      600: "#0059d4",
+      700: "#0048a8",
+      800: "#00367c",
+      900: "#001f4d",
     },
     gray: {
       750: "#222C3B",
+      850: "#171C26",
     },
   },
   components: {
@@ -161,6 +169,29 @@ export const theme = extendTheme({
               },
             },
           },
+        },
+      },
+    },
+  },
+  layerStyles: {
+    card: {
+      bg: 'white',
+      borderRadius: 'xl',
+      boxShadow: 'card',
+      px: '6',
+      py: '5',
+      _dark: {
+        bg: 'gray.750',
+        boxShadow: 'card-dark',
+      }
+    },
+  },
+  styles: {
+    global: {
+      body: {
+        bg: 'gray.50',
+        _dark: {
+          bg: 'gray.850',
         },
       },
     },
