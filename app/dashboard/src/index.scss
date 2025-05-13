@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --app-transition: all 0.3s ease;
+}
+
+* {
+  transition: var(--app-transition);
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .bg-blue-animate {
   animation: blur-animate 200ms ease-in;
   backdrop-filter: blur(10px);

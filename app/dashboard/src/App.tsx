@@ -5,7 +5,7 @@ import { router } from "./pages/Router";
 
 function App() {
     return (
-        <main className="p-8">
+        <main className="p-4 sm:p-6 md:p-8 transition-all">
             <RouterProvider router={router} />
         </main>
     );
